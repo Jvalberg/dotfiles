@@ -18,6 +18,9 @@
 set $mod Mod4
 set $ms Mod4
 
+# Removes titlebar from windows.
+new_window 1pixel
+
 ## Sets default keyboard map
 bindsym $ms+s exec setxkbmap se
 bindsym $ms+e exec "setxkbmap gb && setxkbmap -option caps:swapescape"
