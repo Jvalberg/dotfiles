@@ -3,6 +3,7 @@ My personal dotfiles.
 This is only the configuration files. I still need to install the programs and the software.
 
 To install:
+i3
 Zsh
 Urxvt
 vim-gui
