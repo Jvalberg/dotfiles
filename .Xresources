@@ -60,42 +60,74 @@ xterm*geometry: 120x28
 ! invisibone by baskerville
 !
 ! vim: set ft=xdefaults:
+!
+! Solarized color scheme for the X Window System
+!
+! http://ethanschoonover.com/solarized
 
-URxvt.background: #232323
-URxvt.foreground: #A0A0A0
 
-URxvt.colorBD:    #CFCFCF
-URxvt.colorUL:    #A0A0A0
-URxvt.colorIT:    #686868
+! Common
 
-!BLK
-URxvt.color0:     #303030
-URxvt.color8:     #686868
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
 
-!RED
-URxvt.color9:     #FFA7DA
-URxvt.color1:     #D370A3
 
-!GRN
-URxvt.color10:    #A3D572
-URxvt.color2:     #6D9E3F
+! Dark
 
-!BLU
-URxvt.color12:    #98CBFE
-URxvt.color4:     #6095C5
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
 
-!YEL
-URxvt.color11:    #EFBD8B
-URxvt.color3:     #B58858
 
-!CYN
-URxvt.color14:    #75DAA9
-URxvt.color6:     #3BA275
+! Light
 
-!MAG
-URxvt.color13:    #E5B0FF
-URxvt.color5:     #AC7BDE
+! #define S_base03        #fdf6e3
+! #define S_base02        #eee8d5
+! #define S_base01        #93a1a1
+! #define S_base00        #839496
+! #define S_base0         #657b83
+! #define S_base1         #586e75
+! #define S_base2         #073642
+! #define S_base3         #002b36
 
-!WHT
-URxvt.color7:     #CFCFCF
-URxvt.color15:    #FFFFFF
+
+! To only apply colors to your terminal, for example, prefix
+! the color assignment statement with its name. Example:
+!
+! URxvt*background:            S_base03
+
+URxvt*background:              S_base03
+URxvt*foreground:              S_base0
+URxvt*fading:                  40
+URxvt*fadeColor:               S_base03
+URxvt*cursorColor:             S_base1
+URxvt*pointerColorBackground:  S_base01
+URxvt*pointerColorForeground:  S_base1
+
+URxvt*color0:                  S_base02
+URxvt*color1:                  S_red
+URxvt*color2:                  S_green
+URxvt*color3:                  S_yellow
+URxvt*color4:                  S_blue
+URxvt*color5:                  S_magenta
+URxvt*color6:                  S_cyan
+URxvt*color7:                  S_base2
+URxvt*color9:                  S_orange
+URxvt*color8:                  S_base03
+URxvt*color10:                 S_base01
+URxvt*color11:                 S_base00
+URxvt*color12:                 S_base0
+URxvt*color13:                 S_violet
+URxvt*color14:                 S_base1
+URxvt*color15:                 S_base3

@@ -22,7 +22,11 @@ let g:jedi#show_call_signatures = "1"
 
 " set tabs to have 4 spaces
 " enable syntax highlighting
-syntax on
+syntax enable
+
+" sets the color scheme
+set background=dark
+colorscheme solarized
 
 " show line numbers 
 set number
