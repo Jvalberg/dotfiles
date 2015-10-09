@@ -1,10 +1,12 @@
 ! Urxvt
+!
 URxvt.buffered: true
 URxvt.cursorColor: #395573
 URxvt.cursorUnderline: false
 URxvt.cursorBlink: false
 URxvt.geometry: 80x22
-URxvt.transparent: 0
+URxvt.transparent: true 
+URxvt.shading: 20
 URxvt*urgentOnBell: true
 URxvt.lineSpace: 1
 URxvt.letterSpace: -2
@@ -53,103 +55,47 @@ xterm*foreground: #999999
 xterm*faceName: inconsolatazi4:size=10
 xterm*allowBoldFonts: false
 xterm*geometry: 120x28
-! 
-! Foreground & Background
- URxvt.background: 	  #121419
- URxvt.foreground:  	  #999CA1
- 
-!Misc
- URxvt*highlightColor:     #757F8E
- URxvt*highlightTextColor: #15171A
- URxvt*cursorColor:        #758A8E
- URxvt*pointerColor:       #999CA1
- URxvt*colorBD:            #B8BCC2
- URxvt*colorUL:            #B59279
- URxvt*underlineColor:     #B6937A
- 
-!Black
- URxvt*color0:             #505152
- URxvt*color8:             #7C7D7E
-!Red
- URxvt*color1:             #B63F53
- URxvt*color9:             #E8909B
-!Green
- URxvt*color2:             #51997A
- URxvt*color10:            #9EDCBB
-!Yellow
- URxvt*color3:             #B27B42
- URxvt*color11:            #DCC58F
-!Blue
- URxvt*color4:             #5C95B3
- URxvt*color12:            #A7C8D4
-!Magenta
- URxvt*color5:             #B85A86
- URxvt*color13:            #D9A4C8
-!Cyan
- URxvt*color6:             #83A6A7
- URxvt*color14:            #BBD7D2
-!White
- URxvt*color7:             #A4A6A7
- URxvt*color15:            #E8E6E4
 
-!urxvt color scheme:
-! 
-! URxvt.background: #1a1b1c
-! URxvt.foreground: #808080
-! !Black
-! URxvt.color0: #484848
-! URxvt.color8: #666767
-! !Red
-! URxvt.color1: #a1756c
-! URxvt.color9: #d1aca3
-! !Green
-! URxvt.color2:  #719171
-! URxvt.color10: #aad1ac
-! !Yellow
-! URxvt.color3:  #9c9869
-! URxvt.color11: #c3c49f
-! !Blue
-! URxvt.color4:  #7186a6
-! URxvt.color12: #a6c0de
-! !Magenta
-! URxvt.color5:  #876794
-! URxvt.color13: #bea2cf
-! !Cyan
-! URxvt.color6:  #628c85
-! URxvt.color14: #a1d4c2
-! !White
-! URxvt.color7:  #8f8f8f
-! URxvt.color15: #cacbcb
-! 
-!
-! black
-! 
-! URxvt*background: #2B2B2B
-! URxvt*foreground: #DEDEDE
-!
-! URxvt*colorUL: #86a2b0
-! 
-! URxvt*color0  : #2E3436
-! URxvt*color8  : #555753
-! ! red
-! URxvt*color1  : #CC0000
-! URxvt*color9  : #EF2929
-! green
-! URxvt*color2  : #4E9A06
-! URxvt*color10 : #8AE234
-! yellow
-! URxvt*color3  : #C4A000
-! URxvt*color11 : #FCE94F
-! ! blue
-! URxvt*color4  : #3465A4
-! URxvt*color12 : #729FCF
-! ! magenta
-! URxvt*color5  : #75507B
-! URxvt*color13 : #AD7FA8
-! ! cyan
-! URxvt*color6  : #06989A
-! URxvt*color14 : #34E2E2
-! ! white
-! ! URxvt*color7  : #D3D7CF
-! URxvt*color15 : #EEEEEC
 
+! invisibone by baskerville
+!
+! vim: set ft=xdefaults:
+
+URxvt.background: #232323
+URxvt.foreground: #A0A0A0
+
+URxvt.colorBD:    #CFCFCF
+URxvt.colorUL:    #A0A0A0
+URxvt.colorIT:    #686868
+
+!BLK
+URxvt.color0:     #303030
+URxvt.color8:     #686868
+
+!RED
+URxvt.color9:     #FFA7DA
+URxvt.color1:     #D370A3
+
+!GRN
+URxvt.color10:    #A3D572
+URxvt.color2:     #6D9E3F
+
+!BLU
+URxvt.color12:    #98CBFE
+URxvt.color4:     #6095C5
+
+!YEL
+URxvt.color11:    #EFBD8B
+URxvt.color3:     #B58858
+
+!CYN
+URxvt.color14:    #75DAA9
+URxvt.color6:     #3BA275
+
+!MAG
+URxvt.color13:    #E5B0FF
+URxvt.color5:     #AC7BDE
+
+!WHT
+URxvt.color7:     #CFCFCF
+URxvt.color15:    #FFFFFF
