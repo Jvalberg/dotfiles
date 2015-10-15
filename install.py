@@ -12,8 +12,8 @@ import shutil
 exceptions = [ "README.md", "install.py", ".git", ".install.py.swp" ]
 
 home = os.path.expanduser("~")
-folder = os.path.expanduser("~/dotfiles")
-backup = os.path.expanduser("~/dotfiles_bak")
+folder = os.path.expanduser(os.path.dirname(os.path.realpath(__file__)))
+backup = folder + "_bak"
 
 # Returns a dictionary with the directories and files which
 # should be installed
@@ -61,10 +61,11 @@ def removeAndCreateSymlinks(directories):
 
 print """
 Welcome to the dotfiles installer.
-This installer will add all dotfiles from the ~/dotfiles folder to this current
-user. This is done by backing up the current files in the ~/dotfiles_bak directory,
+This installer will add all dotfiles from the %s folder to this current
+user. This is done by backing up the current files in the %s directory,
 and replacing the current dotfiles with symlinks to the files  in the ~/dotfiles folder.
-"""
+""" % (folder, backup)
+
 directories = getFilePaths()
 print "These are the files which will be installed."
 for directory, files in directories.iteritems():
