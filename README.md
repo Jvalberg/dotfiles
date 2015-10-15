@@ -1,13 +1,5 @@
-My personal dotfiles.
+# Personal dotfiles.
 
-This is only the configuration files. I still need to install the programs and the software.
+All my personal configuration files backed up.
 
-To install:
-i3
-Zsh
-Urxvt
-vim-gui
-
-Plugins:
-vim - pathogen, nerdtree, jedi-vim
-zsh - oh my zsh
+This does not contain any software or plugin files, this needs to be installed separately.
