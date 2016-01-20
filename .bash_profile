@@ -3,4 +3,4 @@
 #
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
-export SHELL=/bin/zsh
+# export SHELL=/bin/zsh

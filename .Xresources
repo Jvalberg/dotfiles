@@ -6,7 +6,7 @@ URxvt.cursorUnderline: false
 URxvt.cursorBlink: false
 URxvt.geometry: 80x22
 URxvt.transparent: true 
-URxvt.shading: 5 
+URxvt.shading: 9 
 URxvt*urgentOnBell: true
 URxvt.lineSpace: 1
 URxvt.letterSpace: -2
@@ -25,8 +25,10 @@ Xft.dpi: 96
 Xft.rgba: rgb
  
 ! -- Fonts -- !
-URxvt.font:xft:dejavu sans mono:medium:size=12
-URxvt.boldFont:xft:dejavu sans mono:medium:size=12
+!URxvt.font:xft:dejavu sans mono:medium:size=12
+!URxvt.boldFont:xft:dejavu sans mono:medium:size=12
+URxvt.font:xft:Monaco:bold:size=11
+URxvt.boldfont:xft:Monaco:bold:size=11
 !URxvt.font:xft:droid sans mono slashed:size=10.5
 !URxvt.boldFont:xft:droid sans mono slashed:size=10.5
 !URxvt.font: xft:Luxi Mono:regular:size=10.5
@@ -43,21 +45,9 @@ URxvt.keysym.Shift-Control-C:   perl:clipboard:copy
 URxvt.iso14755: false
 URxvt.iso14755_52: false
  
-! -- Xterm settings -- !
-xterm*termName: xterm-256color
-XTerm*locale: true
-xterm*cursorColor: #395573
-xterm*toolBar: false
-xterm*scrollBar: false
-xterm*rightScrollBar: false
-xterm*background: #1A1A1A
-xterm*foreground: #999999
-xterm*faceName: inconsolatazi4:size=10
-xterm*allowBoldFonts: false
-xterm*geometry: 120x28
-
 
 ! invisibone by baskerville
+!
 !
 ! vim: set ft=xdefaults:
 !
@@ -107,27 +97,47 @@ xterm*geometry: 120x28
 !
 ! URxvt*background:            S_base03
 
-URxvt*background:              S_base03
-URxvt*foreground:              S_base0
-URxvt*fading:                  40
-URxvt*fadeColor:               S_base03
-URxvt*cursorColor:             S_base1
-URxvt*pointerColorBackground:  S_base01
-URxvt*pointerColorForeground:  S_base1
+! URxvt*background:              S_base03
+! URxvt*foreground:              S_base0
+! URxvt*fading:                  40
+! URxvt*fadeColor:               S_base03
+! URxvt*cursorColor:             S_base1
+! URxvt*pointerColorBackground:  S_base01
+! URxvt*pointerColorForeground:  S_base1
 
-URxvt*color0:                  S_base02
-URxvt*color1:                  S_red
-URxvt*color2:                  S_green
-URxvt*color3:                  S_yellow
-URxvt*color4:                  S_blue
-URxvt*color5:                  S_magenta
-URxvt*color6:                  S_cyan
-URxvt*color7:                  S_base2
-URxvt*color9:                  S_orange
-URxvt*color8:                  S_base03
-URxvt*color10:                 S_base01
-URxvt*color11:                 S_base00
-URxvt*color12:                 S_base0
-URxvt*color13:                 S_violet
-URxvt*color14:                 S_base1
-URxvt*color15:                 S_base3
+! URxvt*color0:                  S_base02
+! URxvt*color1:                  S_red
+! URxvt*color2:                  S_green
+! URxvt*color3:                  S_yellow
+! URxvt*color4:                  S_blue
+! URxvt*color5:                  S_magenta
+! URxvt*color6:                  S_cyan
+! URxvt*color7:                  S_base2
+! URxvt*color9:                  S_orange
+! URxvt*color8:                  S_base03
+! URxvt*color10:                 S_base01
+! URxvt*color11:                 S_base00
+! URxvt*color12:                 S_base0
+! URxvt*color13:                 S_violet
+! URxvt*color14:                 S_base1
+! URxvt*color15:                 S_base3
+
+URxvt*.foreground:   #f0e9dc
+URxvt*.background:   #3e3e3e
+URxvt*.cursorColor:  #f0e9dc
+URxvt*.color0:       #3e3e3e
+URxvt*.color8:       #5d5d5d
+URxvt*.color1:       #966575
+URxvt*.color9:       #cf8ba2
+URxvt*.color2:       #659675
+URxvt*.color10:      #90d6a6
+URxvt*.color3:       #968665
+URxvt*.color11:      #e0bf80
+URxvt*.color4:       #657596
+URxvt*.color12:      #5f7ab1
+URxvt*.color5:       #756596
+URxvt*.color13:      #807793
+URxvt*.color6:       #658e96
+URxvt*.color14:      #1fb6d3
+URxvt*.color7:       #d0d0d0
+URxvt*.color15:      #f6f6f6
