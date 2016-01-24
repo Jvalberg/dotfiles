@@ -27,8 +27,10 @@ Xft.rgba: rgb
 ! -- Fonts -- !
 !URxvt.font:xft:dejavu sans mono:medium:size=12
 !URxvt.boldFont:xft:dejavu sans mono:medium:size=12
-URxvt.font:xft:Monaco:bold:size=11
-URxvt.boldfont:xft:Monaco:bold:size=11
+!URxvt.font:xft:Monofur for Powerline:bold:size=14
+!URxvt.boldfont:xft:Monofur for Powerline:bold:size=14
+URxvt.font:xft:Inconsolata for powerline:bold:size=14
+URxvt.boldfont:xft:Inconsolata for powerline:bold:size=14
 !URxvt.font:xft:droid sans mono slashed:size=10.5
 !URxvt.boldFont:xft:droid sans mono slashed:size=10.5
 !URxvt.font: xft:Luxi Mono:regular:size=10.5

@@ -23,17 +23,19 @@ Plugin 'honza/vim-snippets'		" Pre-created snippets
 Plugin 'scrooloose/nerdtree' 		" File-tree browser
 Plugin 'tomtom/tcomment_vim' 		" Comment lines of code
 Plugin 'vim-scripts/a.vim' 		" A fast way to switch between .h and .c
-Plugin 'wincent/Command-T' 		" Open files with fuzzy search
+Plugin 'kien/ctrlp.vim'			" Open files and buffers with fuzzy search.
 Plugin 'altercation/vim-colors-solarized' " Solarized theme for vim.
-
+Plugin 'tpope/vim-fugitive' 		" Git wrapper
+Plugin 'vim-utils/vim-man'		" Man page viewer for vim
+Plugin 'vim-airline/vim-airline'	" A better status bar for vim (git integration).
+Plugin 'bling/vim-bufferline'	" Shows open buffers in statusbar
+Plugin 'easymotion/vim-easymotion'	" Faster way to traverse file to specific locaiton.
+Plugin 'haya14busa/incsearch.vim'		" Highlights all searhc matches
+Plugin 'haya14busa/incsearch-fuzzy.vim' " Enables fuzzy search
 
 " All plugins must be added before this
 call vundle#end()		" required
 filetype plugin indent on 	" required
-"
-" Supertab Settings
-"
-let g:SuperTabDefaultCompletionType = '<C-n>'
 
 "
 " YouCompleteMe settings
@@ -44,27 +46,89 @@ let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 
 "
+" Supertab Settings
+"
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+"
+" Incsearch settings
+"
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+
+"
+" Incsearch settings
+"
+let g:EasyMotion_do_mapping = 0 " Disable default mapping
+let g:EasyMotion_smartcase = 1
+
+"
 " UltiSnips settings
 "
-let g:UltiSnipsEpandTrigger = "<tab>"
+let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
+" 
+" Airline settings
 "
-" NERDTree settings
-"
-map <F2> :NERDTreeToggle<CR>
+let g:airline_theme = 'bubblegum'
+let g:airline_powerline_fonts = 1
 
 " 
 " Vim settings
 "
 set hidden 		" Allows buffer to be hidden when modified
 set number 		" Shows line numbers
+set tabstop=4 		" Tab size
+set shiftwidth=4 	" Indent size
+set softtabstop=4 	" Soft tab size
 
 syntax enable
 if has('gui_running')
 	set background=dark
 	colorscheme solarized
-	set guifont=Monaco\ 12
+	" set guifont=Monaco\ 12
+	set guifont=Inconsolata\ for\ powerline\ 14
 	set guioptions-=T 	" Removes the toolbar
 endif
+
+" Active folding
+set foldmethod=syntax
+
+"
+" Keybindings
+"
+map <F5> :! make<CR>
+map <leader>gm <Plug>(Man)
+map <F9> :Gstatus<CR>
+map <F10> :Gpush<CR>
+map <F11> :Gpull<CR>
+map <C-h> :A<CR>
+map <F2> :NERDTreeToggle<CR>
+map /		<Plug>(incsearch-forward)
+map ?		<Plug>(incsearch-backward)
+map g/		<Plug>(incsearch-stay)
+map n		<Plug>(incsearch-nohl-n)
+map N		<Plug>(incsearch-nohl-N)
+map *		<Plug>(incsearch-nohl-*)
+map #		<Plug>(incsearch-nohl-#)
+map g*		<Plug>(incsearch-nohl-g*)
+map g#		<Plug>(incsearch-nohl-g#)
+map z/		<Plug>(incsearch-fuzzy-/)
+map z?		<Plug>(incsearch-fuzzy-?)
+map zg/		<Plug>(incsearch-fuzzy-stay)
+
+nmap <Leader>w	<Plug>(easymotion-w)
+nmap <Leader>b	<Plug>(easymotion-b)
+nmap <Leader>e	<Plug>(easymotion-e)
+nmap <Leader>j	<Plug>(easymotion-j)
+nmap <Leader>k	<Plug>(easymotion-k)
+nmap s			<Plug>(easymotion-s2)
+
+nnoremap <Space> za
+nnoremap <leader>gt :YcmCompleter GoTo<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>n :bn<CR>
+nnoremap <leader>p :bp<CR>
+nnoremap <leader>d :bdelete<CR>
