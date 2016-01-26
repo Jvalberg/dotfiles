@@ -147,11 +147,11 @@ nmap <Leader>f	<Plug>(easymotion-s)
 nmap <Leader>F	<Plug>(easymotion-s2)
 
 nmap <Leader>o	:CtrlP<CR>
-nmap <Leader>i	:CtrlPBuffer<CR>
+nmap <Leader>O	:CtrlPBuffer<CR>
 nmap <Leader>p	"+p
 nmap <Leader>P	"+P
 nmap <Leader>y	"+y
-nmap <Leader>x	:w<CR>
+nmap <Leader>a	:w<CR>
 
 nmap <Leader>sh :leftabove	vnew<CR>
 nmap <Leader>sl :rightbelow	vnew<CR>
