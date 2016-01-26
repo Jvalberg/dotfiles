@@ -77,9 +77,9 @@ let g:ctrlp_match_func = { 'match' : 'matcher#cmatch' }
 "
 " UltiSnips settings
 "
-let g:UltiSnipsExpandTrigger = "<C-j>"
-let g:UltiSnipsJumpForwardTrigger = "<C-l>"
-let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
+let g:UltiSnipsExpandTrigger = "<C-v>"
+let g:UltiSnipsJumpForwardTrigger = "<C-v>"
+let g:UltiSnipsJumpBackwardTrigger = "<C-m>"
 
 " 
 " Airline settings
@@ -111,14 +111,15 @@ set foldmethod=syntax
 "
 " Keybindings
 "
-map <F5> :! make<CR>
-map <F4> :! make compile<CR>
-map <leader>gm <Plug>(Man)
-map <F9> :Gstatus<CR>
-map <F10> :Gpush<CR>
-map <F11> :Gpull<CR>
-map <C-h> :A<CR>
-map <F2> :NERDTreeToggle<CR>
+nmap <F2> :NERDTreeToggle<CR>
+nmap <F4> :! make compile<CR>
+nmap <F5> :! make<CR>
+nmap <F9> :Gstatus<CR>
+nmap <F11> :bp<CR>
+nmap <F12> :bn<CR>
+
+nmap <C-y> :A<CR>
+
 map /		<Plug>(incsearch-forward)
 map ?		<Plug>(incsearch-backward)
 map g/		<Plug>(incsearch-stay)
@@ -132,23 +133,36 @@ map z/		<Plug>(incsearch-fuzzy-/)
 map z?		<Plug>(incsearch-fuzzy-?)
 map zg/		<Plug>(incsearch-fuzzy-stay)
 
+" Leader as space bar
+map <Space> <leader>
+
+map <leader>gm <Plug>(Man)
+
 nmap <Leader>w	<Plug>(easymotion-w)
 nmap <Leader>b	<Plug>(easymotion-b)
 nmap <Leader>e	<Plug>(easymotion-e)
 nmap <Leader>j	<Plug>(easymotion-j)
 nmap <Leader>k	<Plug>(easymotion-k)
-nmap <Leader>s			<Plug>(easymotion-s)
-nmap <Leader><S-s>		<Plug>(easymotion-s2)
-nmap <Leader>t	:CtrlPBuffer<CR>
+nmap <Leader>f	<Plug>(easymotion-s)
+nmap <Leader>F	<Plug>(easymotion-s2)
 
-nmap <silent> <A-h> :wincmd h<CR>
-nmap <silent> <A-j> :wincmd j<CR>
-nmap <silent> <A-k> :wincmd k<CR>
-nmap <silent> <A-l> :wincmd l<CR>
+nmap <Leader>o	:CtrlP<CR>
+nmap <Leader>i	:CtrlPBuffer<CR>
+nmap <Leader>p	"+p
+nmap <Leader>P	"+P
+nmap <Leader>y	"+y
+nmap <Leader>x	:w<CR>
 
-nnoremap <Space> za
+nmap <Leader>sh :leftabove	vnew<CR>
+nmap <Leader>sl :rightbelow	vnew<CR>
+nmap <Leader>sj :leftabove	new<CR>
+nmap <Leader>sk :rightbelow	new<CR>
+
+nmap <silent> <C-h> :wincmd h<CR>
+nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-k> :wincmd k<CR>
+nmap <silent> <C-l> :wincmd l<CR>
+
 nnoremap <leader>gt :YcmCompleter GoTo<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>d :bdelete<CR>
-nnoremap <F12> :bn<CR>
-nnoremap <S-F12> :bp<CR>
